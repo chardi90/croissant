@@ -45,7 +45,7 @@ footer {
   position: relative;
   height: 70vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
-    url("/images/footer-wheat.jpg");
+    url("/images/footer-wheat.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -58,7 +58,7 @@ footer {
   position: relative;
   height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
-    url("/images/croissant-hero-image.jpg");
+    url("/images/croissant-hero-image.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -181,7 +181,7 @@ footer {
   position: relative;
   height: 30vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
-    url("/images/croissant-banner-2.jpg");
+    url("/images/croissant-banner-2.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
