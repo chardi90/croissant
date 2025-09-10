@@ -53,21 +53,38 @@ section {
 footer {
   position: relative;
   background: #333;
-  color: white;
+  color: #f5f5f5;
   padding: 40px 0 30px;
 }
 
 .hero {
   position: relative;
   height: 100vh;
+  color: #f5f5f5;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
-    url("/images/croissant-hero-image.webp");
+    url("/images/croissant-banner-1.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  display: flex;
-  flex-direction: column;
-  color: white;
+  transform: scaleX(-1);
+  z-index: 0;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-nav {
@@ -248,7 +265,8 @@ footer {
 
 .slate {
   position: relative;
-  height: 450px;
+  height: auto;
+  min-height: 450px;
   background: linear-gradient(135deg, rgba(30, 30, 30, 0.9), rgba(0, 0, 0, 0.7)),
     url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23222"/><circle cx="50" cy="50" r="1" fill="%23333"/></svg>');
   background-size: cover, 50px 50px;
@@ -463,13 +481,20 @@ footer {
   position: absolute;
   top: 15px;
   left: 15px;
-  background: #ff4444;
   color: white;
   padding: 5px 10px;
   border-radius: 15px;
   font-size: 0.8rem;
   font-weight: 600;
   z-index: 3;
+}
+
+.promo-badge.nouveau {
+  background: #45b7d1;
+}
+
+.promo-badge.populaire {
+  background: #ff4444;
 }
 
 .footer-content {
@@ -527,6 +552,28 @@ footer {
 .success-message.show {
   display: block;
   animation: slideIn 0.5s ease;
+}
+
+.order-hero {
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+    url("/images/footer-wheat.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 80px 0 40px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+}
+
+.product-name {
+  min-height: 3.6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 @keyframes slideIn {
