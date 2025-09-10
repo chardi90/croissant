@@ -5,11 +5,11 @@
     <meta charset="UTF-8" />
     <meta
       name="description"
-      content="Explore the classic French croissant — a buttery, flaky pastry perfect for breakfast and a symbol of French baking."
+      content="Commandez en ligne des croissants et viennoiseries fraîches. Viennoiseries authentiques livrées quotidiennement."
     />
     <meta
       name="keywords"
-      content="croissant, viennoiserie, pâtisserie française, petit-déjeuner, croissant français, recette croissant, recipe, pastry"
+      content="livraison de croissants, boulangerie en ligne, pâtisserie française, viennoiserie, commande de croissants"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,71 +30,178 @@
     <section class="hero">
       <!-- Navigation -->
       <nav class="hero-nav">
-        <a href="#" class="logo">🥐</a>
+        <a href="/index.html" class="logo">🥐 Le Croissant</a>
         <ul class="nav-menu">
+          <li><a href="/index.html">Accueil</a></li>
+          <li><a href="/order.html">Commander</a></li>
+          <li><a href="/about.html">À Propos</a></li>
+          <li><a href="/contact.html">Contact</a></li>
           <li>
-            <a href="/index.html" title="Le croissant homepage">Accueil</a>
-          </li>
-          <li>
-            <a href="/order.html" title="Le croissant photos">Commander</a>
-          </li>
-          <li>
-            <a href="/contact.html" title="Le croissant contact us">Contact</a>
+            <a href="#" class="cart-indicator" onclick="toggleCart()">
+              🛒 Panier
+              <span class="cart-count" id="cartCount">0</span>
+            </a>
           </li>
         </ul>
       </nav>
       <!-- Hero Content -->
       <div class="hero-content">
-        <h2>Pâtisserie raffinée</h2>
+        <h2>Pâtisserie artisanale française</h2>
         <h1>Le Croissant</h1>
+        <p style="color: #e9bd8c; font-size: 18px; margin: 20px 0">
+          Croissants fraîchement préparés chaque matin • Livraison rapide •
+          Ingrédients premium
+        </p>
         <div class="hero-buttons">
-          <a href="#shop" class="btn btn-primary">Commander</a>
-          <a href="#learn" class="btn btn-secondary">Découvrir plus</a>
+          <a href="#specialites" class="btn btn-primary">Commander</a>
+          <a href="#about" class="btn btn-secondary">No Valeurs</a>
         </div>
       </div>
     </section>
     <!-- Section -->
-    <section>
-      <h2>Specialités</h2>
+    <section id="specialites">
+      <h2>Nos Specialités</h2>
+      <div class="success-message" id="successMessage">
+        ✅ Produit ajouté au panier avec succès!
+      </div>
+
       <div class="container">
         <div class="row my-5">
-          <div class="col-sm-4">
+          <div class="col-lg-4 col-md-6">
             <div class="slate">
-              <div class="info-btn">i</div>
+              <div
+                class="info-btn"
+                onclick="showProductInfo('croissant-traditionnel')"
+              >
+                i
+              </div>
               <div class="price">€4.50</div>
               <img
                 src="/images/croissant-pile-silver-tray.webp"
-                alt="A pile of croissants on a silver tray"
+                alt="Croissant traditionnel français"
                 class="img-fluid"
               />
               <div class="product-name">Croissant<br />Traditionnel</div>
-              <a href="#" class="add-btn">Add</a>
+              <div class="quantity-selector">
+                <button
+                  class="qty-btn"
+                  onclick="changeQuantity('croissant-1', -1)"
+                >
+                  -
+                </button>
+                <input
+                  type="number"
+                  class="qty-input"
+                  id="qty-croissant-1"
+                  value="1"
+                  min="1"
+                  max="10"
+                />
+                <button
+                  class="qty-btn"
+                  onclick="changeQuantity('croissant-1', 1)"
+                >
+                  +
+                </button>
+              </div>
+              <button
+                class="add-btn"
+                onclick="addToCart('croissant-1', 'Croissant Traditionnel', 4.50)"
+              >
+                Ajouter au Panier
+              </button>
             </div>
           </div>
-          <div class="col-sm-4">
+
+          <div class="col-lg-4 col-md-6">
             <div class="slate">
-              <div class="info-btn">i</div>
+              <div
+                class="info-btn"
+                onclick="showProductInfo('croissant-sucre')"
+              >
+                i
+              </div>
               <div class="price">€5.25</div>
               <img
                 src="/images/croissant-sugar-shower.webp"
-                alt="Croissants being sprinkled with sugar"
+                alt="Croissant sucré aux perles de sucre"
                 class="img-fluid"
               />
               <div class="product-name">Croissant<br />Sucré</div>
-              <a href="#" class="add-btn">Add</a>
+              <div class="quantity-selector">
+                <button
+                  class="qty-btn"
+                  onclick="changeQuantity('croissant-2', -1)"
+                >
+                  -
+                </button>
+                <input
+                  type="number"
+                  class="qty-input"
+                  id="qty-croissant-2"
+                  value="1"
+                  min="1"
+                  max="10"
+                />
+                <button
+                  class="qty-btn"
+                  onclick="changeQuantity('croissant-2', 1)"
+                >
+                  +
+                </button>
+              </div>
+              <button
+                class="add-btn"
+                onclick="addToCart('croissant-2', 'Croissant Sucré', 5.25)"
+              >
+                Ajouter au Panier
+              </button>
             </div>
           </div>
-          <div class="col-sm-4">
+
+          <div class="col-lg-4 col-md-6">
             <div class="slate">
-              <div class="info-btn">i</div>
+              <div
+                class="info-btn"
+                onclick="showProductInfo('croissant-jambon')"
+              >
+                i
+              </div>
               <div class="price">€6.75</div>
               <img
                 src="/images/cheese-ham-croissants-glazed.webp"
-                alt="Glazed ham and cheese croissants"
+                alt="Croissant au jambon et fromage"
                 class="img-fluid"
               />
               <div class="product-name">Croissant<br />Jambon Fromage</div>
-              <a href="#" class="add-btn">Add</a>
+              <div class="quantity-selector">
+                <button
+                  class="qty-btn"
+                  onclick="changeQuantity('croissant-3', -1)"
+                >
+                  -
+                </button>
+                <input
+                  type="number"
+                  class="qty-input"
+                  id="qty-croissant-3"
+                  value="1"
+                  min="1"
+                  max="10"
+                />
+                <button
+                  class="qty-btn"
+                  onclick="changeQuantity('croissant-3', 1)"
+                >
+                  +
+                </button>
+              </div>
+              <button
+                class="add-btn"
+                onclick="addToCart('croissant-3', 'Croissant Jambon Fromage', 6.75)"
+              >
+                Ajouter au Panier
+              </button>
             </div>
           </div>
         </div>
