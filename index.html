@@ -33,8 +33,8 @@
         <a href="/index.html" class="logo">🥐 Le Croissant</a>
         <ul class="nav-menu">
           <li><a href="/index.html">Accueil</a></li>
-          <li><a href="/order.html">Commander</a></li>
           <li><a href="/about.html">À Propos</a></li>
+          <li><a href="/order.html">Commander</a></li>
           <li><a href="/contact.html">Contact</a></li>
           <li>
             <a href="#" class="cart-indicator" onclick="toggleCart()">
@@ -58,6 +58,43 @@
         </div>
       </div>
     </section>
+
+    <!-- Trust Indicators -->
+    <div class="trust-indicators">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-6">
+            <div class="trust-item">
+              <i class="lni lni-alarm-1"></i>
+              <h4>Fraîcheur Garantie</h4>
+              <p>Préparé quotidiennement avant 6h du matin</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="trust-item">
+              <i class="lni lni-truck-delivery-1"></i>
+              <h4>Livraison Rapide</h4>
+              <p>Livré en 30-45 minutes dans votre secteur</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="trust-item">
+              <i class="lni lni-certificate-badge-1"></i>
+              <h4>Qualité Artisanale</h4>
+              <p>Méthodes traditionnelles françaises</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="trust-item">
+              <i class="lni lni-heart"></i>
+              <h4>Satisfaction 100%</h4>
+              <p>Remboursement si non satisfait</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Section -->
     <section id="specialites">
       <h2>Nos Specialités</h2>
@@ -69,6 +106,7 @@
         <div class="row my-5">
           <div class="col-lg-4 col-md-6">
             <div class="slate">
+              <div class="promo-badge">Populaire</div>
               <div
                 class="info-btn"
                 onclick="showProductInfo('croissant-traditionnel')"
@@ -207,148 +245,49 @@
         </div>
       </div>
     </section>
+
+    <!-- Promo banner -->
     <div class="banner">
       <div class="banner-content">
-        <h3>À propos</h3>
-        <p>
-          Le croissant est une viennoiserie française emblématique, en forme de
-          lune. Préparé avec une pâte feuilletée au beurre, il est à la fois
-          croustillant et léger. Véritable symbole de la gastronomie française.
+        <h3>Offre de Lancement</h3>
+        <p style="font-size: 18px; margin-bottom: 10px">
+          20% de réduction sur votre première commande
         </p>
+        <p style="font-size: 14px; color: #ccc">
+          Code: PREMIER20 • Valable jusqu'au 31 décembre
+        </p>
+        <a href="#specialites" class="btn btn-primary">Profiter de l'Offre</a>
       </div>
     </div>
-    <!-- Section -->
-    <section>
-      <h2>Produits</h2>
-      <div class="container">
-        <div class="row my-5">
-          <div class="col-sm-4">
-            <div class="slate snapshot">
-              <img
-                src="/images/croissant-pile-silver-tray.webp"
-                alt="A pile of croissants on a silver tray"
-                class="img-fluid"
-              />
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="slate">
-              <img
-                src="/images/croissant-sugar-shower.webp"
-                alt="Croissants being sprinkled with sugar"
-                class="img-fluid"
-              />
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="slate">
-              <img
-                src="/images/cheese-ham-croissants-glazed.webp"
-                alt="Glazed ham and cheese croissants"
-                class="img-fluid"
-              />
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="slate snapshot">
-              <img
-                src="/images/croissant-pistache.webp"
-                alt="croissant à la pistache"
-                class="img-fluid"
-              />
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="slate">
-              <img
-                src="/images/croissant-amande.webp"
-                alt="croissant aux amandes"
-                class="img-fluid"
-              />
-              <div class="product-name">Croissant<br />aux amandes</div>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="slate">
-              <img
-                src="/images/croissant-fraise-chocolat.webp"
-                alt="croissant aux fraises au chocolat"
-                class="img-fluid"
-              />
-              <div class="product-name">
-                Croissant<br />aux fraises au chocolat
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="banner">
-      <div class="banner-content">
-        <h3>20% de réduction sur la première commande</h3>
-        <div><a href="#shop" class="btn btn-primary">Commander</a></div>
-      </div>
-    </div>
-    <section>
-      <h2>Friandises</h2>
-      <div class="container">
-        <div class="row my-5">
-          <div class="col-sm-4">
-            <div class="slate">
-              <div class="info-btn">i</div>
-              <div class="price">€4.50</div>
-              <img
-                src="/images/croissant-pistache.webp"
-                alt="croissant à la pistache"
-                class="img-fluid"
-              />
-              <div class="product-name">Croissant<br />à la pistache</div>
-              <a href="#" class="add-btn">Add</a>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="slate">
-              <div class="info-btn">i</div>
-              <div class="price">€5.25</div>
-              <img
-                src="/images/croissant-amande.webp"
-                alt="croissant aux amandes"
-                class="img-fluid"
-              />
-              <div class="product-name">Croissant<br />aux amandes</div>
-              <a href="#" class="add-btn">Add</a>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="slate">
-              <div class="info-btn">i</div>
-              <div class="price">€6.75</div>
-              <img
-                src="/images/croissant-fraise-chocolat.webp"
-                alt="croissant aux fraises au chocolat"
-                class="img-fluid"
-              />
-              <div class="product-name">
-                Croissant<br />aux fraises au chocolat
-              </div>
-              <a href="#" class="add-btn">Add</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+
     <footer>
-      <div class="footer-content">
-        <a href="#" class="logo">🥐</a>
-        <div class="socials">
-          <i class="lni lnis-facebook"></i>
-          <i class="lni lnis-pinterest"></i>
-          <i class="lni lnis-telephone-1"></i>
-          <i class="lni lnis-instagram"></i>
+      <div class="container">
+        <div class="footer-content">
+          <a href="#" class="logo" style="font-size: 2rem; color: #e9bd8c"
+            >🥐 Le Croissant</a
+          >
+          <div class="footer-links">
+            <a href="/about.html">À Propos</a>
+            <a href="/order.html">Livraison</a>
+            <a href="/about.html#faq">FAQ</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/about.html#terms">CGV</a>
+          </div>
+          <p style="color: #999; font-size: 14px">
+            <i class="lni lni-map-pin-5"></i> Paris •
+            <i class="lni lni-phone"></i> 01 23 45 67 89 • @
+            bonjour@lecroissant.fr
+          </p>
+          <div class="socials">
+            <i class="lni lni-facebook"></i>
+            <i class="lni lni-instagram"></i>
+            <i class="lni lni-pinterest"></i>
+            <i class="lni lni-phone"></i>
+          </div>
+          <p style="color: #666; font-size: 12px; margin-top: 30px">
+            © 2024 Le Croissant. Tous droits réservés.
+          </p>
         </div>
-        <h3>Accueil</h3>
-        <h3>Commander</h3>
-        <h3>Contacter</h3>
       </div>
     </footer>
   </body>
