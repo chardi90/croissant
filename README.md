@@ -1,6 +1,6 @@
 # Bakery/Café Website - Croissants
 A webapp layout design for a bakery or cafe website. Design only - ordering functionalities not installed.
-Built in HTML, made responsive with Bootstrap and CSS, then deployed on Netlify.
+Built with HTML and Typescript, made responsive with Bootstrap and CSS, then deployed on Netlify.
 
 ## Features  
 - product overview homepage
