@@ -37,17 +37,20 @@ const productInfo: Record<string, ProductInfo> = {
   },
   "croissant-pistache": {
     title: "Croissant à la Pistache",
-    description: "Croissant traditionnel sublimé par la creme de pistache.",
+    description:
+      "Un croissant pur beurre garni d’une onctueuse crème de pistache, au goût intense et subtil, relevé par des éclats de pistache pour apporter une touche croquante. Sa pâte croustillante et dorée à l’extérieur, fondante à l’intérieur, offre une expérience raffinée pour tous les amateurs de saveurs délicates.",
     ingredients: ["Farine", "Beurre AOP", "Levure", "Sel", "Pistache"],
   },
   "croissant-amandes": {
     title: "Croissant aud Amandes",
-    description: "Croissant traditionnel sublimé par des amandes.",
+    description:
+      "Croissant artisanal généreusement fourré de crème d’amandes maison puis nappé d’amandes effilées et d’un voile de sucre glace. Sa texture croustillante rencontre un cœur tendre et parfumé, révélant toutes les nuances gourmandes de l’amande dans chaque bouchée.",
     ingredients: ["Farine", "Beurre AOP", "Levure", "Sel", "Amandes"],
   },
   "croissant-fraises-chocolat": {
     title: "Croissant aux Fraises au Chocolat",
-    description: "Croissant garni des fraises et du chocolat.",
+    description:
+      "Un croissant moelleux garni de fraises fraîches et de chocolat fondant, fusionnant douceur fruitée et richesse cacaotée. Une alliance gourmande parfaite pour une pause sucrée ou un petit-déjeuner gourmand, à savourer à tout moment de la journée.",
     ingredients: [
       "Farine",
       "Beurre AOP",
@@ -104,7 +107,10 @@ const productInfo: Record<string, ProductInfo> = {
   },
 };
 
-function changeQuantity(productId: string, delta: number): void {
+(window as any).changeQuantity = function (
+  productId: string,
+  delta: number
+): void {
   const input = document.getElementById("qty-" + productId) as HTMLInputElement;
   if (!input) return;
 
@@ -112,9 +118,9 @@ function changeQuantity(productId: string, delta: number): void {
   if (newValue >= 1 && newValue <= 10) {
     input.value = newValue.toString();
   }
-}
+};
 
-function addToCart(
+(window as any).addToCart = function (
   productId: string,
   productName: string,
   price: number
@@ -142,7 +148,12 @@ function addToCart(
 
   updateCartDisplay();
   showSuccessMessage();
-}
+};
+
+(window as any).toggleCart = function (): void {
+  console.log("Toggle cart called");
+  // cart toggle logic
+};
 
 function updateCartDisplay(): void {
   const totalItems: number = cart.reduce((sum, item) => sum + item.quantity, 0);
@@ -158,7 +169,7 @@ function updateCartDisplay(): void {
   }
 }
 
-function showSuccessMessage() {
+function showSuccessMessage(): void {
   const message = document.getElementById("successMessage");
   if (!message) return;
 
@@ -169,32 +180,71 @@ function showSuccessMessage() {
 }
 
 function showProductInfo(productId: string): void {
+  console.log("Showing product info for:", productId);
   const info = productInfo[productId];
-  if (!info) return;
+  if (!info) {
+    console.error("No info found for product:", productId);
+    return;
+  }
 
   const modalTitle = document.getElementById("productInfoLabel") as HTMLElement;
   const modalBody = document.getElementById("productInfoBody") as HTMLElement;
 
+  if (!modalTitle || !modalBody) {
+    console.error("Modal elements not found");
+    return;
+  }
+
   modalTitle.textContent = info.title;
-  let bodyHtml = `<p>${info.description}<br /><br />${info.ingredients}</p>`;
+
+  let ingredientsList = "";
+  if (info.ingredients && info.ingredients.length > 0) {
+    ingredientsList = `<strong>Ingrédients:</strong> ${info.ingredients.join(
+      ", "
+    )}`;
+  }
+
+  let bodyHtml = `
+    <p>${info.description}</p>
+    ${ingredientsList ? `<p>${ingredientsList}</p>` : ""}
+  `;
   modalBody.innerHTML = bodyHtml;
 
   const modalEl = document.getElementById("productInfoModal");
   if (modalEl) {
-    const modal = new bootstrap.Modal(modalEl);
-    modal.show();
+    try {
+      const modal = new bootstrap.Modal(modalEl);
+      modal.show();
+    } catch (error) {
+      console.error("Error creating modal:", error);
+      alert(`${info.title}\n\n${info.description}\n\n${ingredientsList}`);
+    }
   }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM ready, binding info-btn listeners");
 
-  document.querySelectorAll<HTMLElement>(".info-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const productId = btn.dataset.productId;
-      if (productId) {
-        showProductInfo(productId);
-      }
+  setTimeout(() => {
+    const infoButtons = document.querySelectorAll<HTMLElement>(".info-btn");
+    console.log("Found info buttons:", infoButtons.length);
+
+    infoButtons.forEach((btn, index) => {
+      console.log(`Setting up button ${index}:`, btn);
+
+      btn.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+
+        const productId = btn.dataset.productId;
+        console.log("Info button clicked, product ID:", productId);
+
+        if (productId) {
+          showProductInfo(productId);
+        } else {
+          console.error("No product ID found on button:", btn);
+        }
+      });
     });
-  });
+  }, 100);
 });
