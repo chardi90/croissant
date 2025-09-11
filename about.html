@@ -61,39 +61,352 @@
       <div class="container">
         <h1 style="font-size: 3.5rem; margin-bottom: 10px">À Propos de Nous</h1>
         <p style="font-size: 1.2rem; opacity: 0.9">
-          Changer le monde un croissant à la fois.
+          Changer le monde un croissant à la fois depuis 2024.
         </p>
       </div>
     </section>
 
     <!-- About -->
-    <section style="background: #f8f9fa">
-      <h2 class="category-title">Nos Valeurs</h2>
-      <ul class="mt-3">
-        <li>orientation client</li>
-        <li>engagement communautaire</li>
-        <li>intégrité</li>
-        <li>durabilité</li>
-        <li>planète</li>
-        <li>travail d'équipe</li>
-      </ul>
+    <section style="background: #f8f9fa; padding: 60px 0">
+      <div class="container">
+        <h2 class="category-title">Nos Valeurs</h2>
+        <div class="row mt-4">
+          <div class="col-md-8 mx-auto">
+            <div class="values-grid">
+              <div class="value-item">
+                <i
+                  class="lni lni-hand-mic"
+                  style="color: #8b4513; font-size: 1.5rem"
+                ></i>
+                <span>Orientation client</span>
+              </div>
+              <div class="value-item">
+                <i
+                  class="lni lni-heart"
+                  style="color: #8b4513; font-size: 1.5rem"
+                ></i>
+                <span>Engagement communautaire</span>
+              </div>
+              <div class="value-item">
+                <i
+                  class="lni lni-chat-bubble-2"
+                  style="color: #8b4513; font-size: 1.5rem"
+                ></i>
+                <span>Intégrité</span>
+              </div>
+              <div class="value-item">
+                <i
+                  class="lni lni-tree-2"
+                  style="color: #8b4513; font-size: 1.5rem"
+                ></i>
+                <span>Durabilité</span>
+              </div>
+              <div class="value-item">
+                <i
+                  class="lni lni-globe-1"
+                  style="color: #8b4513; font-size: 1.5rem"
+                ></i>
+                <span>Planète</span>
+              </div>
+              <div class="value-item">
+                <i
+                  class="lni lni-hand-shake"
+                  style="color: #8b4513; font-size: 1.5rem"
+                ></i>
+                <span>Travail d'équipe</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- FAQ -->
-    <section id="faq" style="background: #e9bd8c">
-      <h2 class="category-title">FAQs</h2>
-      <ul class="mt-3">
-        <li>Livrez-vous à mon code postal ?</li>
-        <li>Existe-t-il des options végétaliennes ?</li>
-        <li>quelles pâtisseries sont sans gluten ?</li>
-      </ul>
+    <section id="faq" style="background: #e9bd8c; padding: 60px 0">
+      <div class="container">
+        <h2 class="category-title">Questions Fréquentes</h2>
+        <div class="row mt-4">
+          <div class="col-md-10 mx-auto">
+            <div class="accordion" id="faqAccordion">
+              <!-- FAQ Item 1 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeading1">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapse1"
+                    aria-expanded="false"
+                    aria-controls="faqCollapse1"
+                  >
+                    <i
+                      class="lni lni-delivery"
+                      style="margin-right: 10px; color: #8b4513"
+                    ></i>
+                    Livrez-vous à mon code postal ?
+                  </button>
+                </h2>
+                <div
+                  id="faqCollapse1"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faqHeading1"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      Nous livrons actuellement dans toute la région parisienne
+                      (75, 92, 93, 94) ainsi que dans les principales villes de
+                      France. Pour vérifier si votre code postal est couvert,
+                      entrez simplement votre adresse lors de la commande. Nos
+                      zones de livraison s'étendent régulièrement selon la
+                      demande.
+                    </p>
+                    <p><strong>Délais de livraison :</strong></p>
+                    <ul>
+                      <li>Paris intramuros : 2-4h</li>
+                      <li>Banlieue proche : 4-6h</li>
+                      <li>Autres régions : 24-48h</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- FAQ Item 2 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeading2">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapse2"
+                    aria-expanded="false"
+                    aria-controls="faqCollapse2"
+                  >
+                    <i
+                      class="lni lni-leaf"
+                      style="margin-right: 10px; color: #8b4513"
+                    ></i>
+                    Existe-t-il des options végétaliennes ?
+                  </button>
+                </h2>
+                <div
+                  id="faqCollapse2"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faqHeading2"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      Absolument ! Nous proposons une gamme croissante de
+                      viennoiseries végétaliennes, préparées avec les mêmes
+                      standards de qualité que nos produits traditionnels.
+                    </p>
+                    <p><strong>Options végétaliennes disponibles :</strong></p>
+                    <ul>
+                      <li>Croissant végétalien au beurre végétal</li>
+                      <li>Pain au chocolat végétalien</li>
+                      <li>Chausson aux pommes végétalien</li>
+                      <li>Kouign amann végétalien (édition limitée)</li>
+                    </ul>
+                    <p>
+                      Toutes nos options végétaliennes sont clairement marquées
+                      sur notre site et préparées dans un espace dédié pour
+                      éviter la contamination croisée.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 3 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeading3">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapse3"
+                    aria-expanded="false"
+                    aria-controls="faqCollapse3"
+                  >
+                    <i
+                      class="lni lni-heart-monitor"
+                      style="margin-right: 10px; color: #8b4513"
+                    ></i>
+                    Quelles pâtisseries sont sans gluten ?
+                  </button>
+                </h2>
+                <div
+                  id="faqCollapse3"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faqHeading3"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      Nous comprenons l'importance des options sans gluten et
+                      travaillons avec des farines alternatives de haute qualité
+                      pour recréer l'authenticité de nos viennoiseries.
+                    </p>
+                    <p><strong>Produits sans gluten disponibles :</strong></p>
+                    <ul>
+                      <li>
+                        Mini croissants sans gluten (farine de riz et amande)
+                      </li>
+                      <li>Muffins aux fruits sans gluten</li>
+                      <li>Cookies aux pépites de chocolat sans gluten</li>
+                      <li>
+                        Financiers aux amandes (naturellement sans gluten)
+                      </li>
+                    </ul>
+                    <p>
+                      <strong>Important :</strong> Nos produits sans gluten sont
+                      préparés dans un atelier séparé et certifié pour garantir
+                      l'absence de contamination croisée. Tous nos produits sans
+                      gluten portent le logo officiel et sont testés
+                      régulièrement.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 4 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeading4">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapse4"
+                    aria-expanded="false"
+                    aria-controls="faqCollapse4"
+                  >
+                    <i
+                      class="lni lni-timer"
+                      style="margin-right: 10px; color: #8b4513"
+                    ></i>
+                    Quelle est la fraîcheur de vos produits ?
+                  </button>
+                </h2>
+                <div
+                  id="faqCollapse4"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faqHeading4"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      La fraîcheur est au cœur de notre engagement qualité. Tous
+                      nos produits sont fabriqués quotidiennement dans nos
+                      ateliers parisiens.
+                    </p>
+                    <p><strong>Notre processus de fraîcheur :</strong></p>
+                    <ul>
+                      <li>Fabrication quotidienne dès 4h du matin</li>
+                      <li>Livraison le jour même de la production</li>
+                      <li>Ingrédients locaux et de saison quand possible</li>
+                      <li>Aucun conservateur artificiel</li>
+                    </ul>
+                    <p>
+                      Nous recommandons de consommer nos viennoiseries dans les
+                      24-48h suivant la livraison pour une expérience gustative
+                      optimale.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 5 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeading5">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapse5"
+                    aria-expanded="false"
+                    aria-controls="faqCollapse5"
+                  >
+                    <i
+                      class="lni lni-credit-cards"
+                      style="margin-right: 10px; color: #8b4513"
+                    ></i>
+                    Quels sont les moyens de paiement acceptés ?
+                  </button>
+                </h2>
+                <div
+                  id="faqCollapse5"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faqHeading5"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      Nous acceptons tous les moyens de paiement sécurisés pour
+                      votre confort :
+                    </p>
+                    <ul>
+                      <li>
+                        Cartes bancaires (Visa, MasterCard, American Express)
+                      </li>
+                      <li>PayPal et PayPal Express</li>
+                      <li>Apple Pay et Google Pay</li>
+                      <li>
+                        Virement bancaire (pour les commandes professionnelles)
+                      </li>
+                      <li>
+                        Tickets restaurant (Swile, Edenred) pour les commandes
+                        entreprise
+                      </li>
+                    </ul>
+                    <p>
+                      Toutes les transactions sont sécurisées par cryptage SSL
+                      et nous ne conservons aucune donnée de paiement sur nos
+                      serveurs.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- FAQ -->
-    <section id="faq" style="background: #f8f9fa">
-      <h2 class="category-title">Termes et Conditions</h2>
-      <div class="mt-3">
-        <p>Tout le monde partout à la fois.</p>
+    <section id="terms" style="background: #f8f9fa; padding: 60px 0">
+      <div class="container">
+        <h2 class="category-title">Conditions Générales de Vente</h2>
+        <div class="row mt-4">
+          <div class="col-md-10 mx-auto">
+            <div class="terms-content">
+              <h4>1. Conditions de Livraison</h4>
+              <p>
+                Nos viennoiseries sont livrées fraîches dans un délai de 2 à 48h
+                selon votre zone géographique. Les frais de livraison sont
+                calculés automatiquement selon votre adresse.
+              </p>
+
+              <h4>2. Politique de Retour</h4>
+              <p>
+                En cas de problème avec votre commande, contactez-nous dans les
+                24h suivant la livraison. Nous nous engageons à trouver une
+                solution rapide et satisfaisante.
+              </p>
+
+              <h4>3. Allergènes</h4>
+              <p>
+                Tous nos produits peuvent contenir des traces de gluten, œufs,
+                lait, fruits à coque et soja. Les informations détaillées sont
+                disponibles sur chaque fiche produit.
+              </p>
+
+              <h4>4. Protection des Données</h4>
+              <p>
+                Vos données personnelles sont protégées selon le RGPD. Elles ne
+                sont utilisées que pour le traitement de vos commandes et ne
+                sont jamais partagées avec des tiers.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -142,5 +455,6 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
